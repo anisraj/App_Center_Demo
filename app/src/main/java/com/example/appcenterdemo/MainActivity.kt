@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity() {
             Analytics::class.java,
             Crashes::class.java)
         binding.btnCalculate.setOnClickListener {
-            val rate = binding.etInterestRate.text.toString()
-            if (rate.toInt() <= 0) {
-                Analytics.trackEvent("Wrong interest rate")
-            }
+            binding.tvResult.text = "Dummy calculation"
         }
     }
 }
